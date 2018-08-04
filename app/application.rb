@@ -8,7 +8,6 @@ class Application
     if req.path.match(/items/)
       item_title = req.path.split(/items/).last
        if item = @@items.find{|a| a.name == item_title}
-
          resp.write item.price
        else
          resp.write "Item not found"
